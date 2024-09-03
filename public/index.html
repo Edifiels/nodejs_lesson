@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление личной библиотекой</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Моя библиотека</h1>
+        <form id="bookForm">
+            <input type="text" id="title" placeholder="Название книги" required>
+            <input type="text" id="author" placeholder="Автор" required>
+            <input type="number" id="year" placeholder="Год издания" required>
+            <input type="text" id="genre" placeholder="Жанр" required>
+            <select id="status">
+                <option value="не прочитано">Не прочитано</option>
+                <option value="прочитано">Прочитано</option>
+            </select>
+            <button type="submit">Добавить книгу</button>
+        </form>
+
+        <div class="filters">
+            <select id="genreFilter">
+                <option value="">Все жанры</option>
+            </select>
+            <select id="statusFilter">
+                <option value="">Все статусы</option>
+                <option value="не прочитано">Не прочитано</option>
+                <option value="прочитано">Прочитано</option>
+            </select>
+        </div>
+
+        <ul id="bookList"></ul>
+
+        <p>Всего книг: <span id="bookCount">0</span></p>
+        <button id="refreshButton">Обновить страницу</button>
+        <button id="clearAllButton">Удалить все книги</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
